@@ -1,0 +1,192 @@
+/* Layout adjustments for sidebar-only design */
+
+/* Remove header space */
+.md-header {
+    display: none;
+}
+
+/* Sidebar Top Banner - anchored at the top-left */
+.sidebar-top-banner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14rem;
+    height: auto;
+    z-index: 110;
+    /* Above regular sidebar */
+    background-color: #3e2723;
+    border-bottom: 2px solid #5d4037;
+}
+
+.sidebar-top-banner img {
+    width: 100%;
+    display: block;
+}
+
+/* Force dark sidebar styling */
+/* Using a deep historical brown */
+.md-sidebar--primary {
+    position: fixed;
+    /* Pushed down to make room for banner */
+    left: 0;
+
+    bottom: 0;
+    width: 15rem;
+    /* Fixed width for sidebar */
+    margin-left: 0 !important;
+    transform: none !important;
+    /* Override any material transforms */
+    height: 100%;
+
+    background-color: #3e2723;
+    /* Deep brown / leather color */
+    color: #d7ccc8;
+    /* Light grey/brown text */
+    z-index: 100;
+    /* Ensure it stays on top */
+    overflow-y: auto;
+    /* Scrollable if too long */
+}
+
+/* Adjust navigation links in sidebar to be visible against dark background */
+.md-nav--primary .md-nav__title {
+    color: #fff8e1;
+    /* Amber/White off-white */
+    font-weight: bold;
+}
+
+.md-nav--primary .md-nav__item a {
+    color: rgba(255, 248, 225, 0.7) !important;
+}
+
+.md-nav--primary .md-nav__item a:hover {
+    color: #ffca28 !important;
+    /* Gold hover effect */
+}
+
+/* Adjust main content area to fill the space */
+.md-main {
+    padding-top: 8rem;
+    /* Push content down below fixed hero header */
+}
+
+
+.md-main__inner {
+    margin-left: 14rem;
+    /* Push content to the right of fixed sidebar */
+    max-width: calc(100% - 14rem);
+    /* Ensure content fits */
+}
+
+.md-content {
+    margin-top: 0;
+    /* Updated to 0 to let hero sit at top */
+}
+
+/* Add some padding to the logo/title area if we want to simulate it being in sidebar */
+.md-nav__title[for="__drawer"] {
+    background-color: #3e2723;
+    color: #fff8e1;
+}
+
+/* Custom Hero / Big Header (Fixed at top) */
+.custom-hero {
+    background-color: #fff8e1;
+    /* Parchment / Old Paper color */
+    padding: 2rem 2rem;
+    margin-bottom: 0;
+    text-align: left;
+    border-bottom: 3px solid #bcaaa4;
+
+    height: 12rem;
+    /* Position at the very top, next to fixed sidebar */
+    position: absolute;
+    top: 0;
+    left: 15rem;
+    right: 0;
+    width: auto;
+    z-index: 50;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
+
+.custom-hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #3e2723;
+    font-family: "Merriweather", serif;
+    line-height: 1.2;
+}
+
+.custom-hero p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #5d4037;
+    font-style: italic;
+}
+
+
+/* --- Transferred & Optimized from extra.css --- */
+
+:root {
+    /* Using standard MkDocs Material variables for overriding colors */
+    /* #E5E7EB is a light grey from the old file */
+    --md-default-bg-color: #E5E7EB;
+    /* #374151 is a dark grey text */
+    --md-text-color: #374151;
+}
+
+/* Apply the card-like style to the main content area */
+.md-content {
+    background-color: #ffffff;
+    /* White content background to contrast with grey page */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    padding: 1rem;
+    /* Add padding since we're making it a card */
+    margin: 1rem;
+    /* Spacing from edges */
+    margin-top: 54px;
+    /* Keep top margin 0 for hero */
+}
+
+.md-container {
+    background-color: #D1D5DB;
+    /* Outer background from extra.css */
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+    color: #374151;
+    /* Preserving user's text color preference */
+}
+
+.md-nav__title {
+    display: none;
+}
+
+.md-sidebar__scrollwrap {
+    margin: 30px;
+    overflow: hidden;
+    /* Hide scroll as per user request */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.md-sidebar__scrollwrap {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+.md-nav__list {
+    font-size: 20px;
+}

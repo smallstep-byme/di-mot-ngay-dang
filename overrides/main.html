@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block header %}
+<!-- Header removed for sidebar-only layout -->
+{% endblock %}
+
+{% block container %}
+<div class="sidebar-top-banner">
+    <img src="{{ 'assets/images/banner.png' | url }}" alt="History Banner">
+</div>
+<div class="md-typeset custom-hero">
+    <h1>Bước nhỏ</h1>
+    <p>Trên con đường đi tìm tri thức</p>
+</div>
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+{{ super() }}
+{% endblock %}
