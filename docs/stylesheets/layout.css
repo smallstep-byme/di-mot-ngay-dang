@@ -93,9 +93,9 @@
 
 
 .md-main__inner {
-    margin-left: 14rem;
-    /* Push content to the right of fixed sidebar */
-    max-width: calc(100% - 14rem);
+    margin-left: 15rem;
+    /* Match sidebar width exactly */
+    max-width: calc(100% - 15rem);
     /* Ensure content fits */
 }
 
@@ -185,4 +185,21 @@
 
 .md-nav__list {
     font-size: 20px;
+}
+
+/* Footer styling */
+.md-footer {
+    margin-left: 15rem;
+    background-color: #3e2723;
+}
+
+.md-footer-meta {
+    padding: 0.5rem 0;
+    /* Shorten footer height */
+    background-color: #3e2723;
+}
+
+/* Hide navigation buttons in footer if needed to be 'shorter' */
+.md-footer__inner {
+    display: none;
 }

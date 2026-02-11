@@ -9,6 +9,8 @@ theme:
   palette:
     primary: brown
     accent: amber
+  features:
+    - navigation.footer
     
 extra_css:
   - stylesheets/layout.css
