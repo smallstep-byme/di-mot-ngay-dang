@@ -1,4 +1,4 @@
-site_name: My MkDocs Material Documentation
+site_name: Bước nhỏ
 site_url: https://sitename.example
 theme:
   name: material
@@ -9,7 +9,6 @@ theme:
   palette:
     primary: brown
     accent: amber
-  features:
-    - navigation.footer
+    
 extra_css:
   - stylesheets/layout.css

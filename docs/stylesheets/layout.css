@@ -25,13 +25,33 @@
 }
 
 /* Force dark sidebar styling */
+/* Custom Hero / Big Header (Fixed at top) */
+.custom-hero {
+    background-color: #fff8e1;
+    /* Parchment / Old Paper color */
+    padding: 2rem 2rem;
+    margin-bottom: 0;
+    text-align: left;
+    border-bottom: 3px solid #bcaaa4;
+
+    height: 12rem;
+    /* Position at the very top, next to fixed sidebar */
+    position: absolute;
+    top: 0;
+    left: 15rem;
+    right: 0;
+    width: auto;
+    z-index: 50;
+    margin-top: 0;
+    box-sizing: border-box;
+}
+
 /* Using a deep historical brown */
 .md-sidebar--primary {
     position: fixed;
-    /* Pushed down to make room for banner */
     left: 0;
 
-    bottom: 0;
+    top: 0;
     width: 15rem;
     /* Fixed width for sidebar */
     margin-left: 0 !important;
@@ -90,28 +110,6 @@
     color: #fff8e1;
 }
 
-/* Custom Hero / Big Header (Fixed at top) */
-.custom-hero {
-    background-color: #fff8e1;
-    /* Parchment / Old Paper color */
-    padding: 2rem 2rem;
-    margin-bottom: 0;
-    text-align: left;
-    border-bottom: 3px solid #bcaaa4;
-
-    height: 12rem;
-    /* Position at the very top, next to fixed sidebar */
-    position: absolute;
-    top: 0;
-    left: 15rem;
-    right: 0;
-    width: auto;
-    z-index: 50;
-    margin-top: 0;
-    box-sizing: border-box;
-}
-
-
 .custom-hero h1 {
     font-size: 2.5rem;
     margin: 0;
@@ -154,13 +152,11 @@
 
 .md-container {
     background-color: #D1D5DB;
-    /* Outer background from extra.css */
 }
 
 .md-typeset h1,
 .md-typeset h2 {
     color: #374151;
-    /* Preserving user's text color preference */
 }
 
 .md-nav__title {
