@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://sitename.example/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/C%E1%BB%95%20%C4%91%E1%BA%A1i/codai/</loc>
+         <lastmod>2026-02-12</lastmod>
+    </url>
+</urlset>
