@@ -123,6 +123,15 @@
         margin-left: 0;
         background-color: #3e2723;
     }
+
+    .md-container {
+        margin-left: 14rem;
+        /* Offset for vertical header sidebar */
+    }
+
+    .md-content {
+        margin: 8rem 1rem;
+    }
 }
 
 /* Common Styles */
@@ -160,14 +169,11 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     border-radius: 4px;
     padding: 1rem;
-    margin: 8rem 1rem;
-    
+    margin: 1rem;
 }
 
 .md-container {
     background-color: #D1D5DB;
-    margin-left: 14rem;
-    /* Offset for vertical header sidebar */
 }
 
 .md-typeset h1,
@@ -205,46 +211,56 @@
 
 /* Mobile & Tablet Specific Adjustments */
 @media screen and (max-width: 76.24em) {
+
     .md-header {
-        display: block;
         background-color: #3e2723;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        z-index: 100;
     }
 
+    .header-nav,
     .header-banner {
         display: none;
+        /* Hide sidebar-specific items */
     }
 
     .custom-hero {
-        position: absolute !important;
-        height: auto !important;
+        position: absolute;
+        margin-top: 30px;
+        height: 7rem;
+        /* Offset for fixed header */
         background-color: #fff8e1;
-        padding: 0.4rem 1rem;
+        padding: 1.5rem 1rem;
         text-align: center;
         border-bottom: 2px solid #bcaaa4;
         width: 100%;
         box-sizing: border-box;
-        margin-top: 48px;
+        z-index: 50;
     }
 
     .custom-hero h1 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin: 0;
     }
 
     .custom-hero p {
-        font-size: 0.75rem;
-        margin: 0;
+        font-size: 0.85rem;
+        margin: 0.5rem 0 0;
         font-style: italic;
     }
 
-
     .md-main {
-        padding-top: 0;
-        /* Reset since hero is not absolute */
+        padding-top: 0 !important;
     }
 
     .md-content {
-        margin: 0.5rem;
-        margin-top: 0;
+        margin: 8rem 1rem;
+    }
+
+    /* Ensure drawer/menu button is visible */
+    .md-header__button.md-icon {
+        color: #d7ccc8;
     }
 }
