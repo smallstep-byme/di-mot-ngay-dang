@@ -28,6 +28,15 @@
         padding: 0;
     }
 
+    .header-banner {
+        width: 100%;
+    }
+
+    .header-banner img {
+        width: 100%;
+        display: block;
+    }
+
     .md-header__title {
         padding: 1rem;
         margin: 0;
@@ -87,7 +96,7 @@
         background-color: #fff8e1;
         padding: 2rem 2rem;
         margin-bottom: 0;
-        text-align: left;
+        text-align: center;
         border-bottom: 3px solid #bcaaa4;
         height: 12rem;
         position: absolute;
@@ -95,6 +104,7 @@
         left: 15rem;
         right: 0;
         width: auto;
+        height: 14rem;
         z-index: 50;
         margin-top: 0;
         box-sizing: border-box;
