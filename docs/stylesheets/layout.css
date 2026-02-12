@@ -86,25 +86,19 @@
     }
 
 
-    .sidebar-top-banner img {
-        width: 100%;
-        display: block;
-    }
-
     /* Custom Hero / Big Header (Fixed at top) */
     .custom-hero {
         background-color: #fff8e1;
         padding: 2rem 2rem;
         margin-bottom: 0;
-        text-align: center;
+        text-align: left;
         border-bottom: 3px solid #bcaaa4;
-        height: 12rem;
+        height: 14rem;
         position: absolute;
         top: 0;
         left: 15rem;
         right: 0;
         width: auto;
-        height: 14rem;
         z-index: 50;
         margin-top: 0;
         box-sizing: border-box;
@@ -166,7 +160,8 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     border-radius: 4px;
     padding: 1rem;
-    margin: 1rem;
+    margin: 8rem 1rem;
+    
 }
 
 .md-container {
@@ -215,9 +210,8 @@
         background-color: #3e2723;
     }
 
-    .sidebar-top-banner {
+    .header-banner {
         display: none;
-        /* Hide banner on mobile to save space */
     }
 
     .custom-hero {
