@@ -132,6 +132,11 @@
     .md-content {
         margin: 8rem 1rem;
     }
+
+    /* Hide the menu button on desktop since we have the vertical sidebar */
+    .md-header__button[for="__drawer"] {
+        display: none;
+    }
 }
 
 /* Common Styles */
@@ -219,7 +224,10 @@
         z-index: 100;
     }
 
-    .header-nav,
+    .header-nav {
+        display: inline-block;
+    }
+
     .header-banner {
         display: none;
         /* Hide sidebar-specific items */
@@ -236,7 +244,7 @@
         border-bottom: 2px solid #bcaaa4;
         width: 100%;
         box-sizing: border-box;
-        z-index: 50;
+        z-index: 1;
     }
 
     .custom-hero h1 {
@@ -261,5 +269,8 @@
     /* Ensure drawer/menu button is visible */
     .md-header__button.md-icon {
         color: #d7ccc8;
+        cursor: pointer;
+        z-index: 110;
+        margin: 0 10px;
     }
 }
