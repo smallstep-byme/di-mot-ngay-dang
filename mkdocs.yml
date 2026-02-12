@@ -11,10 +11,7 @@ theme:
     accent: amber
   features:
     - navigation.footer
-    - navigation.expand  # Tự động mở rộng các mục menu
-    - navigation.indexes # Cho phép click vào mục cha
-    - navigation.tracking # Tự động cuộn đến vị trí đang xem
-
+    - navigation.tabs
     
 extra_css:
   - stylesheets/layout.css
