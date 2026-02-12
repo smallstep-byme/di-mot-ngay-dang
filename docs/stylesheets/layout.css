@@ -3,24 +3,79 @@
 /* Desktop view (Material's 1220px/76.25em breakpoint) */
 @media screen and (min-width: 76.25em) {
 
-    /* Remove header space */
+    /* Vertical Header Sidebar */
     .md-header {
+        width: 14rem;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #3e2723;
+        z-index: 100;
+        color: #d7ccc8;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0;
+    }
+
+    .md-header__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .md-header__title {
+        padding: 1rem;
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .header-nav {
+        width: 100%;
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 0 1rem 1rem 1rem;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+
+    .header-nav::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .header-nav::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+    }
+
+    /* Reset some Material defaults for inner header nav */
+    .header-nav .md-nav {
+        background-color: transparent;
+    }
+
+    .header-nav .md-nav__title {
         display: none;
     }
 
-    /* Sidebar Top Banner - anchored at the top-left */
-    .sidebar-top-banner {
-        display: block;
-        /* Show only on desktop in this specific fixed position if needed */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 14rem;
-        height: auto;
-        z-index: 110;
-        background-color: #3e2723;
-        border-bottom: 2px solid #5d4037;
+    .header-nav .md-nav__list {
+        font-size: 16px;
     }
+
+    .header-nav .md-nav__link {
+        padding: 0.4rem 0.6rem;
+        color: rgba(255, 248, 225, 0.8) !important;
+    }
+
+    .header-nav .md-nav__link:hover {
+        color: #ffca28 !important;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
 
     .sidebar-top-banner img {
         width: 100%;
@@ -45,19 +100,10 @@
         box-sizing: border-box;
     }
 
-    /* Deep brown sidebar */
-    .md-sidebar--primary {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 15rem;
-        margin-left: 0 !important;
-        transform: none !important;
-        height: 100%;
-        background-color: #3e2723;
-        color: #d7ccc8;
-        z-index: 100;
-        overflow-y: auto;
+    /* Hide original sidebars */
+    .md-sidebar--primary,
+    .md-sidebar--secondary {
+        display: none !important;
     }
 
     .md-main {
@@ -65,12 +111,12 @@
     }
 
     .md-main__inner {
-        margin-left: 15rem;
-        max-width: calc(100% - 15rem);
+        margin-left: 0;
+        max-width: 100%;
     }
 
     .md-footer {
-        margin-left: 15rem;
+        margin-left: 0;
         background-color: #3e2723;
     }
 }
@@ -115,6 +161,8 @@
 
 .md-container {
     background-color: #D1D5DB;
+    margin-left: 14rem;
+    /* Offset for vertical header sidebar */
 }
 
 .md-typeset h1,
@@ -153,7 +201,7 @@
 /* Mobile & Tablet Specific Adjustments */
 @media screen and (max-width: 76.24em) {
     .md-header {
-        display: none;
+        display: block;
         background-color: #3e2723;
     }
 
